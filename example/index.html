@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deferred insertion media</title>
+    <meta name="description" content="Deferred  insertion video youtube, twitch, html5 and images">
+
+    <script src="../src/insertmedia.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            insertmedia();
+        });
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="page">
+
+        <h1>Deferred insertion media</h1>
+
+        <div class="media">
+            <h3>Insert youtube:</h3>
+            <div class="media__box">
+                <div class="media__list">
+                    <div class="media__item"
+                        data-insert='{"type" : "youtube", "src" : "https://www.youtube.com/embed/6Q6cCuSvFpI", "setting" : "autoplay=1&mute=1" }'>
+                    </div>
+                    <div class="media__item"
+                        data-insert='{"type" : "youtube", "src" : "https://www.youtube.com/embed/nbO94LGisHE",  "setting" : "autoplay=1&mute=1" }'>
+                    </div>
+                </div>
+                <div class="media__code">
+                    &lt;div data-insert='{"type" : "youtube", "src" :
+                    "https://www.youtube.com/embed/6Q6cCuSvFpI", "setting" : "autoplay=1&mute=1" }'&gt; &lt;/div&gt;
+                </div>
+            </div> <!-- END media__box -->
+
+            <h3>Insert twitch:</h3>
+            <div class="media__box">
+                <div class="media__list">
+                    <div class="media__item"
+                        data-insert='{"type" : "twitch", "src" : "https://player.twitch.tv/?channel=doublefine",  "setting" : "autoplay=true&muted=true" }'>
+                    </div>
+                    <div class="media__item"
+                        data-insert='{"type" : "twitch", "src" : "https://player.twitch.tv/?channel=pokimane",  "setting" : "" }'>
+                    </div>
+                </div>
+                <div class="media__code">
+                    &lt;div data-insert='{"type" : "twitch", "src" : "https://player.twitch.tv/?channel=doublefine",
+                    "setting" : "autoplay=true&muted=true" }'&gt; &lt;/div&gt;
+                </div>
+            </div> <!-- END media__box -->
+
+            <h3>Insert html5 video:</h3>
+            <div class="media__box">
+                <div class="media__list">
+                    <div class="media__item"
+                        data-insert='{"type" : "html5", "src" : "https://get-web.site/uploads/files/2020-02/1580606556_freewarsgifts.mp4",  "setting" : "controls autoplay loop muted"}'>
+                    </div>
+                    <div class="media__item"
+                        data-insert='{"type" : "html5", "src" : "https://get-web.site/uploads/files/2019-11/1572793706_gw-lineage777-slot-machine.mp4",  "setting" : "controls autoplay loop muted"}'>
+                    </div>
+                </div>
+                <div class="media__code">
+                    &lt;div data-insert='{"type" : "html5", "src" :
+                    "https://get-web.site/uploads/files/2020-02/1580606556_freewarsgifts.mp4", "setting" : "controls
+                    autoplay loop muted"}'&gt; &lt;/div&gt;
+                </div>
+            </div> <!-- END media__box -->
+
+            <h3>Insert images:</h3>
+            <div class="media__box">
+                <div class="media__list">
+                    <div class="media__item"
+                        data-insert='{"type": "img", "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/2015738/img-test.jfif", "width" : "100%", "height" : "auto"}'>
+                    </div>
+                    <div class="media__item"
+                        data-insert='{"type": "img", "src": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/2015738/cat.jpg", "width" : "100%", "height" : "auto"}'>
+                    </div>
+                </div>
+                <div class="media__code">
+                    &lt;div data-insert='{"type": "img", "src":
+                    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/2015738/img-test.jfif", "width" : "100%", "height" :
+                    "auto"}'&gt; &lt;/div&gt;
+                </div>
+            </div> <!-- END media__box -->
+        </div> <!-- END media -->
+
+        <div>
+            <br><br>
+            <hr>
+            <h1>Getting Started</h1>
+
+            <h3>Install:</h3>
+            <div class="code">
+                &lt;script src="../src/insertmedia.js"&gt;&lt;/script&gt;
+            </div>
+
+            <h3>Usage:</h3>
+            <div class="code">
+                insertmedia();
+            </div>
+
+            <h3>Use with options:</h3>
+            <div class="code">
+                insertmedia({
+                <br>
+                &nbsp;&nbsp;delay: 300, // delay. default: 300ms
+                <br>
+                &nbsp;&nbsp;immediately: true, // performing a delay true/false. Immediately or one at a time every
+                "delay" ms. default: true
+                <br>
+                &nbsp;&nbsp;attr: 'data-insert', // Processed attribute. default: data-insert
+                <br>
+                });
+            </div>
+
+            <h3>Add an attribute to the block where we insert the media:</h3>
+            <div class="code">
+                data-insert='{"type" : "youtube", "src" : "https://www.youtube.com/embed/6Q6cCuSvFpI", "setting" :
+                "autoplay=1&mute=1" }'
+            </div>
+
+            <h3>Options:</h3>
+            <div class="code">
+                type*: <b>youtube</b> , <b>twitch</b> , <b>html5</b> , <b>img</b>
+                <br><br>
+                src*: resource url <i>https://example.com/img.jpg</i>
+                <br><br>
+                width: Width available for this type of media
+                <br><br>
+                height: Height available for this type of media
+                <br><br>
+                setting: Settings available for this type of media
+                <br><br>
+                (*) - <i>required</i>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="author">
+                Author: Vitalii P. <br>
+                Site: <a href="https://get-web.site/" target="_blank">get-web.site</a>
+            </div>
+        </footer>
+
+    </section> <!-- END page -->
+</body>
+
+</html>
