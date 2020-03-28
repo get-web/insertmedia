@@ -1,6 +1,6 @@
 /**
  * Author: Vitalii P.
- * Site: https://get-web.sit
+ * Site: https://get-web.site
  * Version: 0.1.0
  * https://github.com/get-web/insertmedia
  */
