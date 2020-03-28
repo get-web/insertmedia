@@ -50,7 +50,7 @@ function insertmedia(config) {
     const cfg = extend({
             delay: 300, // delay. default: 300
             immediately: true, // performing a delay true/false. Immediately or one at a time every "delay" seconds. default: true
-            attr: 'data-insert', // Processed attribute. default: data-insert
+            attr: 'data-insertmedia', // Processed attribute. default: data-insertmedia
         },
         config
     );
