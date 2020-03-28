@@ -10,7 +10,9 @@ Deferred  insertion video youtube, twitch, html5 and images
  
 ### Usage:
  ```
-insertmedia();
+document.addEventListener("DOMContentLoaded", function () {
+    insertmedia();
+});
  ```
  
 ### Use with options:
@@ -18,13 +20,13 @@ insertmedia();
 insertmedia({
   delay: 300, // delay. default: 300ms
   immediately: true, // performing a delay true/false. Immediately or one at a time every "delay" ms. default: true
-  attr: 'data-insert', // Processed attribute. default: data-insert
+  attr: 'data-insertmedia', // Processed attribute. default: data-insertmedia
 });
  ```
  
 ### Add an attribute to the block where we insert the media:
  ```
-data-insert='{"type" : "youtube", "src" : "https://www.youtube.com/embed/6Q6cCuSvFpI", "setting" : "autoplay=1&mute=1" }'
+data-insertmedia='{"type" : "youtube", "src" : "https://www.youtube.com/embed/6Q6cCuSvFpI", "setting" : "autoplay=1&mute=1" }'
  ```
  
 ### Options:
