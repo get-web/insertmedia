@@ -17,10 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
  
 ### Use with options:
  ```
-insertmedia({
-  delay: 300, // delay. default: 300ms
-  immediately: true, // performing a delay true/false. Immediately or one at a time every "delay" ms. default: true
-  attr: 'data-insertmedia', // Processed attribute. default: data-insertmedia
+document.addEventListener("DOMContentLoaded", function () {
+  insertmedia({
+    delay: 300, // delay. default: 300ms
+    immediately: true, // performing a delay true/false. Immediately or one at a time every "delay" ms. default: true
+    attr: 'data-insertmedia', // Processed attribute. default: data-insertmedia
+  });
 });
  ```
  
