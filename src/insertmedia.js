@@ -73,8 +73,7 @@ function insertmedia(config) {
             options
         );
         el.innerHTML =
-            `<iframe width="${settings.width}" height="${settings.height}" src="${settings.src}?${settings.setting}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' +
-					"allowfullscreen></iframe>`;
+            `<iframe width="${settings.width}" height="${settings.height}" src="${settings.src}?${settings.setting}" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>`;
     };
 
     // twitch handler
@@ -87,8 +86,7 @@ function insertmedia(config) {
             },
             options
         );
-        el.innerHTML = `<iframe width="${settings.width}" height="${settings.height}" src="${settings.src}&${settings.setting}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"' +
-					"allowfullscreen></iframe>`;
+        el.innerHTML = `<iframe width="${settings.width}" height="${settings.height}" src=" ${settings.src}&${settings.setting}" frameborder="0" allowfullscreen="true" scrolling="no" ></iframe>`;
     };
 
     // images handler
