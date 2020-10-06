@@ -86,7 +86,7 @@ function insertmedia(config) {
             },
             options
         );
-        el.innerHTML = `<iframe width="${settings.width}" height="${settings.height}" src=" ${settings.src}&${settings.setting}" frameborder="0" allowfullscreen="true" scrolling="no" ></iframe>`;
+        el.innerHTML = `<iframe width="${settings.width}" height="${settings.height}" src="${settings.src}&${settings.setting}" frameborder="0" allowfullscreen="true" scrolling="no" ></iframe>`;
     };
 
     // images handler
